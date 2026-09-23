@@ -12,4 +12,5 @@ Open `index.html` in a browser. The site uses a small inline script only to keep
 
 - `images/fantamuretto-dashboard.png` and `images/fantamuretto-fasce.png` are screenshots of the public [Fantamuretto demo](https://ago-filo.github.io/Fantamuretto/) after selecting its neutral starting data. They contain no personal auction plan.
 - `second-brain-graph.svg` is an illustrative graph with example note titles, not a screenshot of private notes.
-
+- `assets/estro-logo.svg` is the public [ESTRO TECHNOLOGIES logo](https://estro.ai/logo.svg), used to identify my employer on the native macOS app card.
+- `assets/app-store-icon.png` and `assets/google-play.svg` are platform icons from [Apple Developer](https://developer.apple.com/assets/elements/icons/app-store/app-store-96x96_2x.png) and [Android Developers](https://developer.android.com/static/images/logos/google-play.svg). They identify where the customer-facing app is published; they are not download buttons because product links are not public.
