@@ -2,7 +2,7 @@
 
 Live at [ago-filo.github.io](https://ago-filo.github.io/).
 
-This is a static portfolio built with HTML and CSS. It introduces my full-stack work on AWS and links to public projects. GitHub Pages publishes the root of the `main` branch; there is no build step.
+This is a static portfolio built with HTML and CSS. It introduces my full-stack work on AWS, AI integrations, native macOS and mobile apps, and links to public projects. Product names covered by NDA are omitted. GitHub Pages publishes the root of the `main` branch; there is no build step.
 
 ## Preview locally
 
