@@ -10,6 +10,7 @@ Open `index.html` in a browser. The site uses a small inline script only to keep
 
 ## Project visuals
 
+- `images/autoscuola-genova.svg` is an original illustration of a driving school car and Genoa's coastal setting. It is not a screenshot or a client asset.
 - `images/fantamuretto-dashboard.png` and `images/fantamuretto-fasce.png` are screenshots of the public [Fantamuretto demo](https://ago-filo.github.io/Fantamuretto/) after selecting its neutral starting data. They contain no personal auction plan.
 - `second-brain-graph.svg` is an illustrative graph with example note titles, not a screenshot of private notes.
 - `assets/estro-logo.svg` is the public [ESTRO TECHNOLOGIES logo](https://estro.ai/logo.svg), used to identify my employer on the native macOS app card.
