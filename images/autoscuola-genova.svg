@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" role="img" aria-labelledby="title desc">
+<title id="title">Driving school in Genoa</title>
+<desc id="desc">Illustration of a driving school car on a coastal road, with Genoa's hillside buildings, harbor and Lanterna lighthouse.</desc>
+<defs>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#1a3b4a"/><stop offset="1" stop-color="#386776"/></linearGradient>
+  <linearGradient id="sea" x2="0" y2="1"><stop stop-color="#3d7885"/><stop offset="1" stop-color="#1b4656"/></linearGradient>
+  <linearGradient id="road" x2="0" y2="1"><stop stop-color="#344d55"/><stop offset="1" stop-color="#172b36"/></linearGradient>
+  <linearGradient id="car" x2="0" y2="1"><stop stop-color="#e8f2d1"/><stop offset="1" stop-color="#b4d27a"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-50%" width="160%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+  <pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" fill="none" stroke="#c9e5df" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="760" height="600" fill="url(#sky)"/>
+<rect width="760" height="600" fill="url(#grid)"/>
+<circle cx="624" cy="95" r="64" fill="#b9d8ad" opacity=".12"/>
+<circle cx="624" cy="95" r="39" fill="#d8ecbb" opacity=".14"/>
+<path d="M0 255C125 183 236 228 339 177c101-48 188-9 421-49v246H0Z" fill="#2c5361"/>
+<path d="M0 299c135-40 238-16 338-76 109-65 242-5 422-37v218H0Z" fill="#3b6370"/>
+<g fill="#274956" stroke="#7ca2a5" stroke-width="2">
+  <path d="M47 267h48v114H47zM104 250h60v131h-60zM174 272h50v109h-50zM237 243h67v138h-67zM314 265h55v116h-55zM384 239h69v142h-69zM465 262h63v119h-63zM541 241h55v140h-55z"/>
+</g>
+<g fill="#c5dfd4" opacity=".43">
+  <path d="M61 283h7v11h-7zm17 0h7v11h-7zm-17 23h7v11h-7zm17 0h7v11h-7zm41-37h8v12h-8zm19 0h8v12h-8zm-19 25h8v12h-8zm19 0h8v12h-8zm49-4h8v11h-8zm44-29h9v13h-9zm25 0h9v13h-9zm-25 27h9v13h-9zm25 0h9v13h-9zm51-4h8v11h-8zm20 0h8v11h-8zm45-25h9v12h-9zm25 0h9v12h-9zm-25 25h9v12h-9zm25 0h9v12h-9zm55 0h9v12h-9zm23 0h9v12h-9zm52-26h9v12h-9zm23 0h9v12h-9z"/>
+</g>
+<g transform="translate(621 183)">
+  <path d="M30 0 46 0 52 18H24Z" fill="#dce5d0"/>
+  <path d="M26 18h24l-5 130H31Z" fill="#dce5d0" stroke="#a7c6b6" stroke-width="3"/>
+  <path d="M21 49h34v13H21zm2 63h30v12H23z" fill="#b5cfc0"/>
+  <path d="M31 29h14v11H31zM34 78h8v15h-8z" fill="#254857"/>
+  <path d="M37-19V0" stroke="#dce5d0" stroke-width="5"/>
+  <path d="M16 148h44v7H16z" fill="#dce5d0"/>
+  <path d="M27 30 0 13M49 30l27-17" stroke="#deedc5" stroke-opacity=".35" stroke-width="3"/>
+</g>
+<path d="M0 340c179-31 343 21 527-6 86-13 164-33 233-29v109H0Z" fill="url(#sea)"/>
+<g stroke="#b5ded9" stroke-opacity=".23" stroke-width="3" fill="none"><path d="M42 367c94-10 143 10 229 0M339 359c109 7 181-15 304-8M119 390c84-7 151 8 221 0M468 384c85 8 151-5 230-11"/></g>
+<path d="M0 411c207-24 401 35 760-14v203H0Z" fill="url(#road)"/>
+<path d="M0 422c207-24 401 35 760-14" fill="none" stroke="#aad6cf" stroke-width="9" opacity=".55"/>
+<path d="M50 519c175-9 320 15 493-3 74-8 129-12 183-10" fill="none" stroke="#dfedc2" stroke-width="5" stroke-linecap="round" stroke-dasharray="43 29" opacity=".72"/>
+<ellipse cx="371" cy="500" rx="236" ry="29" fill="#081d29" opacity=".55" filter="url(#shadow)"/>
+<g transform="translate(145 326)">
+  <path d="M65 110 103 55q14-20 39-22h168q27 0 44 21l47 56 36 11q17 5 19 23l4 33q1 17-17 17H36q-20 0-20-17v-27q0-23 20-30Z" fill="url(#car)" stroke="#eff7dd" stroke-width="4"/>
+  <path d="m106 102 31-46q6-9 18-9h145q16 0 25 11l36 44Z" fill="#224856" stroke="#b6d5c8" stroke-width="4"/>
+  <path d="M230 48v55" stroke="#b6d5c8" stroke-width="4"/>
+  <path d="M44 127h389" stroke="#3d655c" stroke-width="3" opacity=".6"/>
+  <path d="M28 150h50v20H27zm381 0h42v20h-42z" fill="#f2d79b"/>
+  <path d="M15 173h445" stroke="#507164" stroke-width="7"/>
+  <circle cx="112" cy="186" r="34" fill="#122631" stroke="#8da99d" stroke-width="6"/>
+  <circle cx="112" cy="186" r="12" fill="#a5bcb4"/>
+  <circle cx="363" cy="186" r="34" fill="#122631" stroke="#8da99d" stroke-width="6"/>
+  <circle cx="363" cy="186" r="12" fill="#a5bcb4"/>
+  <path d="M197 31V14q0-10 10-10h72q10 0 10 10v17" fill="#d8ecc3" stroke="#eff7dd" stroke-width="3"/>
+  <text x="243" y="22" text-anchor="middle" fill="#244754" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.3">SCUOLA GUIDA</text>
+  <path d="M165 138h38m53 0h38" stroke="#648172" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g transform="translate(46 48)">
+  <rect width="145" height="49" rx="24.5" fill="#142e3b" stroke="#a8d6c7" stroke-opacity=".65"/>
+  <circle cx="24" cy="24.5" r="5" fill="#d6edac"/>
+  <text x="43" y="31" fill="#e7f3dd" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="2">GENOVA</text>
+</g>
+</svg>
