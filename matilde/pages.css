@@ -36,3 +36,16 @@ a.download-button{text-decoration:none}.status+.text-link{display:inline-block;m
 .eutopia-heading{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-bottom:25px}
 .eutopia-logo{display:block;flex-shrink:0}.eutopia-logo img{display:block;width:220px;height:60px;object-fit:contain}
 @media(max-width:650px){.eutopia-heading{flex-direction:column;align-items:flex-start;gap:20px}}
+
+/* Projects: apertura fotografica come la Home. */
+.projects-hero{height:100vh;height:100svh;min-height:620px;width:100%;position:relative;isolation:isolate;overflow:hidden;background:#19241f}
+.projects-collage{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:5px;z-index:-2}
+.collage-tile{overflow:hidden;min-height:0;min-width:0;position:relative}.collage-tile img,.collage-tile svg{display:block;width:100%;height:100%;object-fit:cover;overflow:hidden}
+.tile-solo{grid-column:1;grid-row:1/3}.tile-solo img{object-position:52% 25%}.tile-duo{grid-column:2;grid-row:1/3}.tile-duo img{object-position:51% 30%}.tile-ensemble{grid-column:3/5;grid-row:1}.tile-ensemble img{object-position:center 40%}.tile-closeup{grid-column:3;grid-row:2}.tile-closeup img{object-position:center 30%}.tile-education{grid-column:4;grid-row:2}
+.projects-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#0005,transparent 24%,transparent 60%,#0009)}
+.projects-hero .nav{position:absolute;inset:0 0 auto;z-index:3;background:linear-gradient(#0007,transparent);border:0;color:#fbf4e8}
+.projects-signature{position:absolute;left:7.5%;bottom:clamp(140px,19vh,200px)}.projects-signature:before{content:"";display:block;width:58px;height:2px;background:#e6a07f;margin-bottom:24px}.projects-signature h1{font:normal clamp(42px,5.5vw,88px)/1.1 Georgia,serif;letter-spacing:.015em;margin:0;color:#fbf4e8;text-shadow:0 2px 20px #0005}
+.projects-scroll{position:absolute;right:7.5%;bottom:43px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;color:#fbf4e8}.projects-scroll span{font-size:17px;margin-left:10px}
+.projects .composition{padding-top:45px!important}.person-website{display:inline-flex;gap:10px;align-items:center;font-size:13px;color:#e6a07f;text-decoration:none;border-bottom:1px solid #e6a07f70;padding-bottom:6px}.person-website svg{width:20px;height:20px;flex-shrink:0}.person-website:hover{color:#fff4e8}
+.eutopia-brand{margin-bottom:26px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:650px){.projects-hero{min-height:580px}.projects-collage{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:3px}.tile-solo{grid-column:1;grid-row:1/3}.tile-duo{grid-column:2;grid-row:1/3}.tile-ensemble{grid-column:1/3;grid-row:3}.tile-closeup,.tile-education{display:none}.tile-solo img{object-position:50% 20%}.tile-duo img{object-position:50% 30%}.projects-signature{left:7%;bottom:calc(33.333% + 26px)}.projects-signature h1{font-size:52px}.projects-scroll{right:7%;bottom:25px}.projects .composition{padding-top:25px!important}}
