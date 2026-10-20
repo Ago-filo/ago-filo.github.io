@@ -38,3 +38,5 @@ a.download-button{text-decoration:none}.status+.text-link{display:inline-block;m
 
 /* Pagine interne: ritratto intero a sinistra, contenuto a destra. */
 .split-page .portrait-panel>img.photograph{object-fit:contain;object-position:center}
+
+.split-page .biography{margin-top:24px}
