@@ -1,0 +1,10 @@
+
+html{color-scheme:light}body{background:#f7f0e4;color:#352f29;--accent:#97533d;--muted:#686156;--icon-cutout:#f7f0e4}
+.navigation,.nav{background:#19241f;color:#fbf4e8}.navigation .active,.navigation [aria-current],.nav [aria-current]{color:#e6a07f;border-color:#e6a07f}.navigation a:hover,.nav a:hover{color:#e6a07f}
+.portrait-panel{background:#19241f}.portrait-panel:after{display:none}.page-content,.composition,.heading{color:#352f29}
+.lead,.biography p,.projects-intro p,.project-section>p{color:#403a31}.quiet,.resource p,.social-caption,.status{color:#686156}.subtitle,.project-instruments,.eyebrow,.text-link{color:#97533d}
+.resource,.project-section,.download-entry{border-color:#b99c7f66}.page-footer,.footer{color:#686156;border-color:#b99c7f66}.page-footer a{color:#97533d}
+.social-icon{border-color:#76634f66}.social-icon[href]:hover{background:#b5674e15;border-color:#97533d}.download-button{background:#99563f;color:#fff8ef;border-color:#99563f}
+.photo,.project-gallery figure{background:#19241f}.photo{margin-top:0}.project-intro-photo{background:transparent}
+
+.navigation{background:linear-gradient(90deg,transparent 51%,#19241f 51%)}
