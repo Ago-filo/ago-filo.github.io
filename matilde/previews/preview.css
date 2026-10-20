@@ -7,7 +7,7 @@
 .page-content h2,.content h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.2;letter-spacing:0}
 .biography{width:100%;max-width:680px}.biography p{font:400 15px/1.95 Arial,Helvetica,sans-serif;color:#dedfd3;margin:0 0 22px;max-width:none}
 a.download-button{text-decoration:none}.status+.text-link{display:inline-block;margin-top:8px}
-.project-intro-photo{display:block;width:100%;max-width:580px;margin:30px auto 35px;overflow:hidden}
+.project-intro-photo{display:block;width:100%;max-width:420px;margin:30px auto 35px;overflow:hidden}
 .project-intro-photo svg{display:block;width:100%;height:auto;aspect-ratio:580/450;overflow:hidden}
 .projects-intro{max-width:700px;margin:0 0 35px}.projects-intro p{font-size:15px;line-height:1.9;color:#dedfd3}.projects-intro .lead{font:400 26px/1.4 Georgia,serif;color:#fbf4e8}
 .project-section{width:100%;border-top:1px solid #e6a07f45;padding-top:35px;margin-top:25px;margin-bottom:35px}
