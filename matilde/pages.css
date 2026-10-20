@@ -29,3 +29,10 @@ a.download-button{text-decoration:none}.status+.text-link{display:inline-block;m
 .duo-gallery img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
 
 .duo-curricula{display:flex;gap:18px 30px;flex-wrap:wrap;margin-top:22px}
+
+/* Nuovi ritratti del duo, entrambi verticali. */
+.duo-gallery figure{aspect-ratio:2/3}
+.duo-gallery img{object-fit:cover;object-position:center}
+.eutopia-heading{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-bottom:25px}
+.eutopia-logo{display:block;flex-shrink:0}.eutopia-logo img{display:block;width:220px;height:60px;object-fit:contain}
+@media(max-width:650px){.eutopia-heading{flex-direction:column;align-items:flex-start;gap:20px}}
