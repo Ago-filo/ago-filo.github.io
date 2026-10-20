@@ -35,3 +35,6 @@ a.download-button{text-decoration:none}.status+.text-link{display:inline-block;m
 
 /* La foto educativa originale resta sotto la dimensione nativa, senza ricostruzioni AI. */
 .project-intro-photo{max-width:420px}
+
+/* Pagine interne: ritratto intero a sinistra, contenuto a destra. */
+.split-page .portrait-panel>img.photograph{object-fit:contain;object-position:center}
