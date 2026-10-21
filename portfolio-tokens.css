@@ -1,0 +1,65 @@
+/* Hallmark · tokens for interactive portfolio exploration */
+:root {
+  color-scheme: dark;
+  --color-paper: oklch(17% 0.009 255);
+  --color-panel: oklch(21% 0.011 255);
+  --color-stage: oklch(14% 0.012 255);
+  --color-hover: oklch(27% 0.012 255);
+  --color-ink: oklch(96% 0.006 255);
+  --color-muted: oklch(73% 0.013 255);
+  --color-rule: oklch(32% 0.015 255);
+  --color-accent: oklch(81% 0.11 215);
+  --color-accent-ink: oklch(15% 0.025 215);
+  --color-project: oklch(77% 0.15 25);
+  --color-project-tint: oklch(24% 0.028 25);
+  --color-shadow: oklch(7% 0.009 255 / 0.48);
+  --color-clear: transparent;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --text-small: 14px;
+  --radius-card: 24px;
+  --radius-control: 12px;
+  --radius-pill: 999px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 180ms;
+  --dur-panel: 280ms;
+  --dur-enter: 650ms;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-paper: oklch(98% 0.005 255);
+  --color-panel: oklch(95% 0.008 255);
+  --color-stage: oklch(91% 0.012 255);
+  --color-hover: oklch(89% 0.012 255);
+  --color-ink: oklch(22% 0.015 255);
+  --color-muted: oklch(44% 0.015 255);
+  --color-rule: oklch(80% 0.012 255);
+  --color-accent: oklch(43% 0.14 240);
+  --color-accent-ink: oklch(98% 0.005 255);
+  --color-project: oklch(45% 0.16 25);
+  --color-project-tint: oklch(91% 0.025 25);
+  --color-shadow: oklch(30% 0.015 255 / 0.12);
+}
+[data-current="fantamuretto"] {
+  --color-project: oklch(81% 0.12 130);
+  --color-project-tint: oklch(24% 0.025 130);
+}
+[data-current="brain"] {
+  --color-project: oklch(80% 0.1 215);
+  --color-project-tint: oklch(24% 0.024 215);
+}
+:root[data-theme="light"] [data-current="fantamuretto"] {
+  --color-project: oklch(40% 0.11 140);
+  --color-project-tint: oklch(91% 0.025 130);
+}
+:root[data-theme="light"] [data-current="brain"] {
+  --color-project: oklch(43% 0.13 240);
+  --color-project-tint: oklch(91% 0.025 215);
+}
