@@ -40,3 +40,32 @@ a.download-button{text-decoration:none}.status+.text-link{display:inline-block;m
 .split-page .portrait-panel>img.photograph{object-fit:contain;object-position:center}
 
 .split-page .biography{margin-top:24px}
+
+/* La Home occupa la schermata anche quando l'area utile è bassa. */
+html:has(body > .hero),
+body:has(> .hero) {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+body > .hero {
+  height: 100vh;
+  height: 100svh;
+  min-height: 0;
+  background: var(--accent);
+}
+body > .hero > .socials {
+  bottom: max(38px, env(safe-area-inset-bottom));
+}
+
+@media (max-width: 800px) {
+  body > .hero > .socials { bottom: max(30px, env(safe-area-inset-bottom)); }
+}
+
+@media (max-height: 480px) {
+  body > .hero .navigation { padding-block: 16px; }
+  body > .hero .signature { bottom: 75px; }
+  body > .hero .signature::before { margin-bottom: 12px; }
+  body > .hero .signature h1 { font-size: clamp(32px, 6vw, 52px); }
+  body > .hero .signature p { margin-top: 4px; font-size: 21px; }
+  body > .hero > .socials { bottom: max(12px, env(safe-area-inset-bottom)); }
+}
