@@ -1,4 +1,4 @@
-/* Hallmark · macrostructure: Feature Stack · theme: Midnight · genre: modern-minimal · pre-emit critique: P4 H5 E4 S5 R4 V5 · motion: entrance, crossfade, preview tilt */
+/* Hallmark · targeted revision: compact introduction, project gallery, distinct work panel · theme: Midnight · pre-emit critique: P4 H5 E4 S5 R5 V4 */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 @import url("portfolio-tokens.css?v=20261021");
 * {
@@ -714,4 +714,150 @@ footer a {
   width: 0;
   height: 0;
   scroll-margin-top: var(--space-lg);
+}
+
+/* Clear page navigation and a quieter introduction. */
+.top {
+  gap: var(--space-lg);
+  border-bottom: 1px solid var(--color-rule);
+}
+.section-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-left: auto;
+}
+.section-nav a {
+  padding-block: var(--space-xs);
+  font-size: var(--text-small);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-muted);
+  text-underline-offset: 6px;
+}
+.section-nav a:hover,
+.section-nav a[aria-current="location"] {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+.hero {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+.hero h1 {
+  font-size: clamp(36px, 4.6vw, 64px);
+  letter-spacing: -0.05em;
+}
+.section-heading {
+  margin-bottom: var(--space-lg);
+}
+.section-heading h2 {
+  font-size: 30px;
+  letter-spacing: -0.04em;
+}
+.section-heading p {
+  margin-top: var(--space-xs);
+  font-size: 16px;
+  color: var(--color-muted);
+}
+.project-switcher {
+  padding: 0 0 var(--space-xs);
+  background: var(--color-clear);
+  border: 0;
+  border-bottom: 1px solid var(--color-rule);
+  border-radius: 0;
+}
+.project-switcher button {
+  border-radius: var(--radius-control);
+}
+.project-panel {
+  background: var(--color-clear);
+  border: 0;
+  border-radius: 0;
+  padding: var(--space-lg) 0 0;
+}
+.experience {
+  margin-block: var(--space-3xl) var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--color-panel);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+}
+.section-label {
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-small);
+  color: var(--color-accent);
+}
+.platforms article {
+  background: var(--color-clear);
+  border: 0;
+  border-top: 1px solid var(--color-rule);
+  border-radius: 0;
+  padding: var(--space-md) 0 0;
+}
+footer {
+  padding-bottom: var(--space-lg);
+}
+.project-context {
+  margin: var(--space-md) 0 0;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-rule);
+  font-size: var(--text-small);
+  line-height: 1.6;
+}
+.project-context dt {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.project-context dd {
+  margin: 4px 0 var(--space-sm);
+  color: var(--color-muted);
+}
+.project-context dd:last-child {
+  margin-bottom: 0;
+}
+.experience-detail h3 {
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  margin-bottom: var(--space-sm);
+}
+.experience-detail p + h3 {
+  margin-top: var(--space-md);
+}
+.about p + p {
+  margin-top: var(--space-sm);
+}
+@media (max-width: 768px) {
+  .top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-sm);
+  }
+  .top-right {
+    grid-column: 2;
+    grid-row: 1;
+    gap: var(--space-sm);
+  }
+  .section-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+  .hero {
+    padding-block: var(--space-lg) var(--space-xl);
+  }
+  .hero h1 {
+    font-size: clamp(36px, 7.5vw, 48px);
+  }
+  .section-heading h2 {
+    font-size: 26px;
+  }
+  .experience {
+    margin-block: var(--space-2xl) var(--space-lg);
+    padding: var(--space-md);
+  }
+  .experience .section-top h2 {
+    font-size: 28px;
+  }
 }

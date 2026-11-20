@@ -13,6 +13,8 @@ const projects = {
     alt: "Grafici reali di posizione e passo in PitWall",
     caption: "Leclerc / Sainz — Bahrain 2024",
     note: "Dati mancanti e limiti dell’analisi restano espliciti.",
+    challenge: "I dati di gara possono essere incompleti e il servizio OpenF1 può non essere disponibile.",
+    approach: "Confronti guidati serviti da dati salvati e validati, con copertura e limiti espliciti. Le altre gare dipendono da OpenF1 o dalla cache.",
   },
   fantamuretto: {
     status: "Web app pubblica",
@@ -27,6 +29,8 @@ const projects = {
     alt: "Schermata reale della regia di Fantamuretto",
     caption: "Regia d’asta — configurazione demo",
     note: "I piani personali si possono importare ed esportare.",
+    challenge: "Aggiornare il listone senza perdere fasce personali, acquisti e storico dell’asta.",
+    approach: "Identificatori stabili per i giocatori e dati personali salvati nel browser, con importazione ed esportazione del piano.",
   },
   brain: {
     status: "Esperimento personale",
@@ -36,6 +40,8 @@ const projects = {
     tech: "Obsidian · AnythingLLM · LM Studio",
     caption: "Note → Ricerca → Modello locale",
     note: "Risposte con riferimenti alle fonti e aggiornamento delle note in valutazione.",
+    challenge: "Consultare le note personali con domande in linguaggio naturale usando un modello locale.",
+    approach: "Sto sperimentando un flusso tra Obsidian, AnythingLLM e LM Studio, verificando i riferimenti alle fonti. Il progetto è ancora in valutazione.",
   },
 };
 const panel = document.querySelector(".project-panel");
@@ -66,6 +72,8 @@ async function selectProject(key, focus = false) {
     ["tech", "project-tech"],
     ["note", "project-note"],
     ["caption", "preview-caption"],
+    ["challenge", "project-challenge"],
+    ["approach", "project-approach"],
   ])
     document.getElementById(id).textContent = p[field];
   const isBrain = key === "brain";
@@ -135,19 +143,28 @@ document.querySelector(".theme-switch").addEventListener("click", () => {
       light ? "Attiva tema scuro" : "Attiva tema chiaro",
     );
 });
-const observer = new IntersectionObserver(
-  (entries) => {
-    for (const entry of entries)
-      if (entry.isIntersecting) {
-        document.querySelectorAll(".dock a").forEach((a) => {
-          if (a.getAttribute("href") === "#" + entry.target.id)
-            a.setAttribute("aria-current", "location");
-          else a.removeAttribute("aria-current");
-        });
-      }
-  },
-  { rootMargin: "-15% 0px -65% 0px" },
-);
-["main", "progetti", "esperienza"].forEach((id) =>
-  observer.observe(document.getElementById(id)),
-);
+const navigation = [...document.querySelectorAll(".section-nav a")];
+const sections = navigation.map((link) => document.querySelector(link.hash));
+let scrollUpdatePending = false;
+function updateNavigation() {
+  const threshold = Math.min(innerHeight * 0.3, 180);
+  const atBottom = scrollY > 0 &&
+    scrollY + innerHeight >= document.documentElement.scrollHeight - 2;
+  const active = atBottom ? sections.at(-1) : sections.findLast((section) =>
+    section.getBoundingClientRect().top <= threshold,
+  );
+  navigation.forEach((link) => {
+    if (active && link.hash === "#" + active.id)
+      link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  });
+  scrollUpdatePending = false;
+}
+addEventListener("scroll", () => {
+  if (!scrollUpdatePending) {
+    scrollUpdatePending = true;
+    requestAnimationFrame(updateNavigation);
+  }
+}, { passive: true });
+addEventListener("resize", updateNavigation);
+updateNavigation();
