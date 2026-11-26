@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171819">
+  <meta name="description" content="Il laboratorio di Filippo Agosti. Progetti personali, prototipi ed esperimenti software.">
+  <title>Laboratorio · Filippo Agosti</title>
+  <link rel="canonical" href="https://ago-filo.github.io/laboratorio/">
+  <link rel="stylesheet" href="lavagna.css">
+  <script src="lavagna.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#progetti">Vai ai progetti</a>
+  <header class="top">
+    <a class="identity" href="./">
+      <span class="identity-mark" aria-hidden="true"></span>
+      Filippo Agosti
+    </a>
+    <a class="github" href="https://github.com/Ago-filo">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <div class="intro">
+      <div>
+        <h1>Laboratorio</h1>
+        <p>Progetti personali, esperimenti e cose in corso.</p>
+      </div>
+      <a class="board-hint" href="#progetti"><span aria-hidden="true">↘</span> Scegli un blocco</a>
+    </div>
+
+    <section class="board" id="progetti" aria-label="Progetti personali">
+      <article class="project pitwall" id="pitwall">
+        <a class="tile" href="#pitwall" aria-labelledby="tile-pitwall">
+          <div class="tile-heading">
+            <div>
+              <h2 id="tile-pitwall">PitWall</h2>
+              <p>Confronto tra piloti di Formula 1.</p>
+            </div>
+            <span class="expand" aria-hidden="true"></span>
+          </div>
+          <div class="cover pitwall-cover">
+            <img src="pitwall.png" alt="">
+          </div>
+          <div class="tile-footer"><span>Web app pubblica</span><span>Formula 1</span></div>
+        </a>
+        <section class="project-details pitwall-detail" aria-labelledby="detail-pitwall">
+          <p class="detail-status">Web app pubblica</p>
+          <h2 id="detail-pitwall">PitWall</h2>
+          <p>Confronta due piloti per posizione, tempi sul giro, pneumatici e soste nelle gare concluse.</p>
+          <div class="detail-actions">
+            <a href="https://pitwall.ago-filo-labs.workers.dev/?season=2024&amp;race=9472&amp;drivers=16,55">Esplora una gara ↗</a>
+            <a href="https://github.com/Ago-filo/Pitwall">Codice ↗</a>
+          </div>
+          <figure>
+            <img src="pitwall.png" alt="Interfaccia di PitWall con il confronto fra due piloti selezionato">
+            <figcaption>Interfaccia di PitWall</figcaption>
+          </figure>
+          <h3>Dati mancanti e confronti riproducibili</h3>
+          <p>I dati di gara possono essere incompleti. I confronti guidati usano dati salvati e validati, con copertura e limiti espliciti. Le altre gare dipendono da OpenF1 o dalla cache.</p>
+          <p class="tech">React · TypeScript · Cloudflare Workers</p>
+        </section>
+      </article>
+
+      <article class="project second-brain" id="second-brain">
+        <a class="tile" href="#second-brain" aria-labelledby="tile-brain">
+          <div class="tile-heading">
+            <div>
+              <h2 id="tile-brain">Second Brain</h2>
+              <p>Ricerca nelle note con un modello locale.</p>
+            </div>
+            <span class="expand" aria-hidden="true"></span>
+          </div>
+          <div class="cover brain-cover">
+            <img src="../second-brain/grafo-obsidian.png" alt="">
+          </div>
+          <div class="tile-footer"><span>Demo riproducibile</span><span>AI locale</span></div>
+        </a>
+        <section class="project-details" aria-labelledby="detail-brain">
+          <p class="detail-status">Demo riproducibile</p>
+          <h2 id="detail-brain">Second Brain</h2>
+          <p>Un assistente per l’onboarding di un team IT fittizio. Risponde consultando note Markdown e mostra i passaggi che supportano la risposta.</p>
+          <div class="detail-actions">
+            <a href="../second-brain/index.html">Prova le domande ↗</a>
+            <a href="../second-brain/second-brain.zip" download>Scarica le prove ↓</a>
+          </div>
+          <figure>
+            <img src="../second-brain/grafo-obsidian.png" alt="Grafo di Obsidian con le note di esempio utilizzate nell’esperimento">
+          </figure>
+          <h3>Note, ricerca e generazione</h3>
+          <p>Un comando Node.js sincronizza aggiunte, modifiche e rimozioni delle note. AnythingLLM recupera i passaggi pertinenti e LM Studio esegue il modello in locale. Le dieci domande di verifica includono informazioni assenti e procedure modificate.</p>
+          <details>
+            <summary>Guarda la configurazione locale</summary>
+            <video controls preload="none" playsinline poster="../second-brain/grafo-obsidian.png" aria-label="Registrazione della configurazione di Obsidian e AnythingLLM">
+              <source src="../second-brain/configurazione-locale.mp4" type="video/mp4">
+            </video>
+          </details>
+          <p class="tech">Node.js · Obsidian · AnythingLLM · LM Studio</p>
+        </section>
+      </article>
+
+      <article class="project workbench" id="document-workbench">
+        <a class="tile" href="#document-workbench" aria-labelledby="tile-workbench">
+          <div class="tile-heading">
+            <div>
+              <h2 id="tile-workbench">Document Workbench</h2>
+              <p>Controllo incrociato di ordini e fatture.</p>
+            </div>
+            <span class="expand" aria-hidden="true"></span>
+          </div>
+          <div class="cover paper-cover" aria-hidden="true">
+            <div class="paper-sheet order"><span>ORDINE</span><strong>122,00 €</strong></div>
+            <div class="paper-sheet invoice"><span>FATTURA</span><strong>134,20 €</strong></div>
+            <span class="paper-difference">+12,20 €</span>
+          </div>
+          <div class="tile-footer"><span>Prototipo locale</span><span>OCR · AI</span></div>
+        </a>
+        <section class="project-details" aria-labelledby="detail-workbench">
+          <p class="detail-status">Prototipo locale</p>
+          <h2 id="detail-workbench">Document Workbench</h2>
+          <p>Legge PDF e scansioni per confrontare ordini e fatture. Mostra le citazioni a supporto dei campi estratti e registra le correzioni manuali.</p>
+          <h3>Una prova con documenti sintetici</h3>
+          <p>Un ordine da 122,00 € e una fattura da 134,20 € riportano lo stesso riferimento. L’app segnala la differenza di 12,20 € e mostra i dati da controllare.</p>
+          <h3>Estrazione e controlli</h3>
+          <p>Il modello gira sul PC e propone i dati. Regole esplicite verificano riferimenti, fornitori e importi. La validazione su documenti reali e la distribuzione su altri computer sono ancora in programma.</p>
+          <p class="tech">Python · FastAPI · RapidOCR · Qwen · SQLite</p>
+        </section>
+      </article>
+
+      <article class="project fantamuretto" id="fantamuretto">
+        <a class="tile" href="#fantamuretto" aria-labelledby="tile-fantamuretto">
+          <div class="tile-heading">
+            <div>
+              <h2 id="tile-fantamuretto">Fantamuretto</h2>
+              <p>Strumenti per l’asta del fantacalcio.</p>
+            </div>
+            <span class="expand" aria-hidden="true"></span>
+          </div>
+          <div class="cover fanta-cover">
+            <img src="../images/fantamuretto-dashboard.png" alt="">
+          </div>
+          <div class="tile-footer"><span>Web app pubblica</span><span>Fantacalcio</span></div>
+        </a>
+        <section class="project-details" aria-labelledby="detail-fantamuretto">
+          <p class="detail-status">Web app pubblica</p>
+          <h2 id="detail-fantamuretto">Fantamuretto</h2>
+          <p>Preparazione e gestione dell’asta del fantacalcio con fasce personali, prezzi obiettivo, budget e rose avversarie.</p>
+          <div class="detail-actions">
+            <a href="https://ago-filo.github.io/Fantamuretto/">Apri Fantamuretto ↗</a>
+            <a href="https://github.com/Ago-filo/Fantamuretto">Codice ↗</a>
+          </div>
+          <figure>
+            <img src="../images/fantamuretto-dashboard.png" alt="Dashboard della regia d’asta di Fantamuretto con i dati demo">
+            <figcaption>Regia d’asta con la configurazione demo</figcaption>
+          </figure>
+          <h3>Come aggiornare il listone durante una stagione?</h3>
+          <p>Gli identificatori dei giocatori permettono di aggiornare il listone conservando fasce, acquisti e storico. Il piano personale è salvato nel browser e può essere importato ed esportato.</p>
+          <p class="tech">JavaScript · HTML · CSS</p>
+        </section>
+      </article>
+
+      <article class="project autoscuola" id="autoscuola">
+        <a class="tile" href="#autoscuola" aria-labelledby="tile-autoscuola">
+          <div class="tile-heading">
+            <div>
+              <h2 id="tile-autoscuola">Autoscuola</h2>
+              <p>Un gestionale per la segreteria.</p>
+            </div>
+            <span class="expand" aria-hidden="true"></span>
+          </div>
+          <div class="cover autoscuola-cover">
+            <img src="../images/autoscuola-genova.svg" alt="">
+          </div>
+          <div class="tile-footer"><span>Progetto privato</span><span>Gestionale</span></div>
+        </a>
+        <section class="project-details" aria-labelledby="detail-autoscuola">
+          <p class="detail-status">Progetto privato</p>
+          <h2 id="detail-autoscuola">Autoscuola</h2>
+          <p>Gestionale dedicato alle iscrizioni e alle attività quotidiane di segreteria, studenti e istruttori.</p>
+          <figure>
+            <img src="../images/autoscuola-genova.svg" alt="Illustrazione di un’auto di scuola guida sul litorale di Genova">
+            <figcaption>Illustrazione del progetto</figcaption>
+          </figure>
+          <p>Il codice e i dati sono privati. La messa in produzione è da completare.</p>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <dialog class="zoom" aria-labelledby="zoom-title">
+    <div class="zoom-bar">
+      <span id="zoom-title">Scheda del progetto</span>
+      <button class="close-zoom" type="button" autofocus>Chiudi <span aria-hidden="true">×</span></button>
+    </div>
+    <div class="zoom-content"></div>
+  </dialog>
+</body>
+</html>

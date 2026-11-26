@@ -1,0 +1,39 @@
+/* Charcoal board, warm chalk and project-specific marks. */
+:root {
+  color-scheme: dark;
+  --color-board: oklch(21% 0.006 248);
+  --color-deep: oklch(17% 0.008 248);
+  --color-tile: oklch(25% 0.009 248);
+  --color-tile-hover: oklch(28% 0.012 248);
+  --color-line: oklch(40% 0.012 248);
+  --color-dot: oklch(47% 0.012 246 / 0.3);
+  --color-ink: oklch(95% 0.018 90);
+  --color-muted: oklch(77% 0.021 90);
+  --color-green: oklch(86% 0.09 149);
+  --color-rose: oklch(81% 0.102 20);
+  --color-blue: oklch(84% 0.085 230);
+  --color-yellow: oklch(89% 0.11 89);
+  --color-lilac: oklch(84% 0.085 308);
+  --color-paper: oklch(93% 0.035 92);
+  --color-paper-ink: oklch(30% 0.044 75);
+  --color-overlay: oklch(12% 0.009 248 / 0.77);
+  --color-shadow: oklch(13% 0.008 248 / 0.46);
+  --font-display: "Bahnschrift", "Arial Narrow", "Segoe UI", sans-serif;
+  --font-body: "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --space-2xs: .25rem;
+  --space-xs: .5rem;
+  --space-sm: .75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --text-xs: .72rem;
+  --text-sm: .875rem;
+  --text-display: clamp(3rem, 8.1vw, 7.4rem);
+  --radius-tile: .25rem;
+  --dur-fast: 160ms;
+  --dur-zoom: 240ms;
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+}
