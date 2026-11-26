@@ -16,7 +16,11 @@
   --color-lilac: oklch(84% 0.085 308);
   --color-paper: oklch(93% 0.035 92);
   --color-paper-ink: oklch(30% 0.044 75);
-  --color-overlay: oklch(12% 0.009 248 / 0.77);
+  --color-note: oklch(28% 0.012 248);
+  --color-sport-line: oklch(55% 0.064 149);
+  --color-sport-fill: oklch(33% 0.049 149 / .14);
+  --color-work-line: oklch(52% 0.067 230);
+  --color-work-fill: oklch(33% 0.072 230 / .16);
   --color-shadow: oklch(13% 0.008 248 / 0.46);
   --font-display: "Bahnschrift", "Arial Narrow", "Segoe UI", sans-serif;
   --font-body: "Segoe UI", system-ui, sans-serif;
@@ -31,9 +35,5 @@
   --space-3xl: 4rem;
   --text-xs: .72rem;
   --text-sm: .875rem;
-  --text-display: clamp(3rem, 8.1vw, 7.4rem);
   --radius-tile: .25rem;
-  --dur-fast: 160ms;
-  --dur-zoom: 240ms;
-  --ease-out: cubic-bezier(.2, .7, .2, 1);
 }

@@ -1,6 +1,6 @@
 # Laboratorio · Filippo Agosti
 
-[Apri la lavagna](https://ago-filo.github.io/laboratorio/) per esplorare progetti personali, prototipi e prove. Ogni blocco si apre in una scheda con un indirizzo condivisibile, per esempio [Second Brain](https://ago-filo.github.io/laboratorio/#second-brain).
+[Apri la lavagna](https://ago-filo.github.io/laboratorio/) per esplorare progetti personali, prototipi e prove. Puoi muoverti sulla lavagna, zoomare e spostare i progetti, i gruppi e gli appunti. Le posizioni restano nel tuo browser. Ogni progetto ha un indirizzo condivisibile, per esempio [Second Brain](https://ago-filo.github.io/laboratorio/#second-brain).
 
 ## Anteprima locale
 

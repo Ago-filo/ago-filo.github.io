@@ -4,194 +4,221 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171819">
-  <meta name="description" content="Il laboratorio di Filippo Agosti. Progetti personali, prototipi ed esperimenti software.">
+  <meta name="description" content="Il laboratorio di Filippo Agosti. Una lavagna esplorabile di progetti personali, prototipi ed esperimenti software.">
   <title>Laboratorio · Filippo Agosti</title>
   <link rel="canonical" href="https://ago-filo.github.io/laboratorio/">
-  <link rel="stylesheet" href="lavagna.css">
-  <script src="lavagna.js" defer></script>
+  <link rel="stylesheet" href="lavagna.css?v=2">
+  <script src="lavagna.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#progetti">Vai ai progetti</a>
   <header class="top">
-    <a class="identity" href="./">
-      <span class="identity-mark" aria-hidden="true"></span>
-      Filippo Agosti
-    </a>
+    <a class="identity" href="./"><span class="identity-mark" aria-hidden="true"></span>Filippo Agosti</a>
     <a class="github" href="https://github.com/Ago-filo">GitHub <span aria-hidden="true">↗</span></a>
   </header>
   <main>
     <div class="intro">
-      <div>
-        <h1>Laboratorio</h1>
-        <p>Progetti personali, esperimenti e cose in corso.</p>
-      </div>
-      <a class="board-hint" href="#progetti"><span aria-hidden="true">↘</span> Scegli un blocco</a>
+      <h1>Laboratorio</h1>
+      <p>Progetti personali, esperimenti e cose in corso.</p>
     </div>
 
-    <section class="board" id="progetti" aria-label="Progetti personali">
-      <article class="project pitwall" id="pitwall">
-        <a class="tile" href="#pitwall" aria-labelledby="tile-pitwall">
-          <div class="tile-heading">
-            <div>
-              <h2 id="tile-pitwall">PitWall</h2>
-              <p>Confronto tra piloti di Formula 1.</p>
-            </div>
-            <span class="expand" aria-hidden="true"></span>
+    <section class="board" id="progetti" aria-label="Lavagna dei progetti personali">
+      <div class="zone-shortcuts" role="group" aria-label="Vai a un gruppo">
+        <button data-focus-zone="sport" type="button">Sport e dati</button>
+        <button data-focus-zone="work" type="button" aria-label="Documenti e flussi di lavoro">Documenti e flussi</button>
+      </div>
+      <div class="board-viewport" tabindex="0" aria-label="Area interattiva" aria-describedby="board-help">
+        <div class="world">
+          <div class="zone sport" data-zone="sport" data-x="55" data-y="66" data-mobile-x="30" data-mobile-y="20" style="--zone-width:414px;--zone-height:478px">
+            <button class="zone-handle" type="button"><span aria-hidden="true">⠿</span> Sport e dati</button>
           </div>
-          <div class="cover pitwall-cover">
-            <img src="pitwall.png" alt="">
+          <div class="zone work" data-zone="work" data-x="525" data-y="27" data-mobile-x="30" data-mobile-y="325" style="--zone-width:588px;--zone-height:550px">
+            <button class="zone-handle" type="button"><span aria-hidden="true">⠿</span> Documenti e flussi di lavoro</button>
           </div>
-          <div class="tile-footer"><span>Web app pubblica</span><span>Formula 1</span></div>
-        </a>
-        <section class="project-details pitwall-detail" aria-labelledby="detail-pitwall">
-          <p class="detail-status">Web app pubblica</p>
-          <h2 id="detail-pitwall">PitWall</h2>
-          <p>Confronta due piloti per posizione, tempi sul giro, pneumatici e soste nelle gare concluse.</p>
-          <div class="detail-actions">
-            <a href="https://pitwall.ago-filo-labs.workers.dev/?season=2024&amp;race=9472&amp;drivers=16,55">Esplora una gara ↗</a>
-            <a href="https://github.com/Ago-filo/Pitwall">Codice ↗</a>
-          </div>
-          <figure>
-            <img src="pitwall.png" alt="Interfaccia di PitWall con il confronto fra due piloti selezionato">
-            <figcaption>Interfaccia di PitWall</figcaption>
-          </figure>
-          <h3>Dati mancanti e confronti riproducibili</h3>
-          <p>I dati di gara possono essere incompleti. I confronti guidati usano dati salvati e validati, con copertura e limiti espliciti. Le altre gare dipendono da OpenF1 o dalla cache.</p>
-          <p class="tech">React · TypeScript · Cloudflare Workers</p>
-        </section>
-      </article>
+          <div class="connections" aria-hidden="true"></div>
+          <article class="project pitwall" id="pitwall" data-group="sport" data-x="100" data-y="145" data-mobile-x="52" data-mobile-y="88" style="--node-width:282px">
+            <a class="tile" draggable="false" href="#pitwall" aria-labelledby="tile-pitwall">
+              <div class="tile-heading">
+                <div>
+                  <h2 id="tile-pitwall">PitWall</h2>
+                  <p>Confronto tra piloti di Formula 1.</p>
+                </div>
+                <span class="expand" aria-hidden="true">+</span>
+              </div>
+              <div class="cover pitwall-cover">
+                <img draggable="false" src="pitwall.png" alt="">
+              </div>
+              <div class="tile-footer"><span>Web app pubblica</span><span>Formula 1</span></div>
+            </a>
+            <section class="notes" id="notes-pitwall" aria-label="Appunti del progetto">
+              <article class="note" data-note="confronto" tabindex="0" aria-label="Confronto piloti">
+                <h3>Due piloti, una gara<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>Posizioni, tempi sul giro, pneumatici e soste. Il confronto guidato parte dai dati di una gara conclusa.</p>
+                <a href="https://pitwall.ago-filo-labs.workers.dev/?season=2024&amp;race=9472&amp;drivers=16,55">Esplora una gara ↗</a>
+              </article>
+              <article class="note" data-note="copertura" tabindex="0" aria-label="Copertura dei dati">
+                <h3>Quando i dati mancano<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>I confronti guidati usano dati salvati e validati, con limiti espliciti. Per le altre gare uso OpenF1 o la cache.</p>
+              </article>
+              <article class="note" data-note="codice" tabindex="0" aria-label="Come è fatto PitWall">
+                <h3>Come è fatto<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>React, TypeScript e Cloudflare Workers.</p>
+                <a href="https://github.com/Ago-filo/Pitwall">Codice ↗</a>
+              </article>
+            </section>
+          </article>
 
-      <article class="project second-brain" id="second-brain">
-        <a class="tile" href="#second-brain" aria-labelledby="tile-brain">
-          <div class="tile-heading">
-            <div>
-              <h2 id="tile-brain">Second Brain</h2>
-              <p>Ricerca nelle note con un modello locale.</p>
-            </div>
-            <span class="expand" aria-hidden="true"></span>
-          </div>
-          <div class="cover brain-cover">
-            <img src="../second-brain/grafo-obsidian.png" alt="">
-          </div>
-          <div class="tile-footer"><span>Demo riproducibile</span><span>AI locale</span></div>
-        </a>
-        <section class="project-details" aria-labelledby="detail-brain">
-          <p class="detail-status">Demo riproducibile</p>
-          <h2 id="detail-brain">Second Brain</h2>
-          <p>Un assistente per l’onboarding di un team IT fittizio. Risponde consultando note Markdown e mostra i passaggi che supportano la risposta.</p>
-          <div class="detail-actions">
-            <a href="../second-brain/index.html">Prova le domande ↗</a>
-            <a href="../second-brain/second-brain.zip" download>Scarica le prove ↓</a>
-          </div>
-          <figure>
-            <img src="../second-brain/grafo-obsidian.png" alt="Grafo di Obsidian con le note di esempio utilizzate nell’esperimento">
-          </figure>
-          <h3>Note, ricerca e generazione</h3>
-          <p>Un comando Node.js sincronizza aggiunte, modifiche e rimozioni delle note. AnythingLLM recupera i passaggi pertinenti e LM Studio esegue il modello in locale. Le dieci domande di verifica includono informazioni assenti e procedure modificate.</p>
-          <details>
-            <summary>Guarda la configurazione locale</summary>
-            <video controls preload="none" playsinline poster="../second-brain/grafo-obsidian.png" aria-label="Registrazione della configurazione di Obsidian e AnythingLLM">
-              <source src="../second-brain/configurazione-locale.mp4" type="video/mp4">
-            </video>
-          </details>
-          <p class="tech">Node.js · Obsidian · AnythingLLM · LM Studio</p>
-        </section>
-      </article>
+          <article class="project fantamuretto" id="fantamuretto" data-group="sport" data-x="158" data-y="341" data-mobile-x="357" data-mobile-y="83" style="--node-width:268px">
+            <a class="tile" draggable="false" href="#fantamuretto" aria-labelledby="tile-fantamuretto">
+              <div class="tile-heading">
+                <div>
+                  <h2 id="tile-fantamuretto">Fantamuretto</h2>
+                  <p>Strumenti per l’asta del fantacalcio.</p>
+                </div>
+                <span class="expand" aria-hidden="true">+</span>
+              </div>
+              <div class="cover fanta-cover">
+                <img draggable="false" src="../images/fantamuretto-dashboard.png" alt="">
+              </div>
+              <div class="tile-footer"><span>Web app pubblica</span><span>Fantacalcio</span></div>
+            </a>
+            <section class="notes" id="notes-fantamuretto" aria-label="Appunti del progetto">
+              <article class="note note-visual" data-note="asta" tabindex="0" aria-label="Regia d’asta">
+                <h3>Regia d’asta<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <img src="../images/fantamuretto-fasce.png" alt="Fasce personalizzabili in Fantamuretto">
+                <a href="https://ago-filo.github.io/Fantamuretto/">Apri Fantamuretto ↗</a>
+              </article>
+              <article class="note" data-note="listone" tabindex="0" aria-label="Aggiornamento del listone">
+                <h3>Aggiornare il listone<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>Gli identificatori dei giocatori conservano fasce, acquisti e storico dopo un aggiornamento.</p>
+              </article>
+              <article class="note" data-note="piano" tabindex="0" aria-label="Salvataggio del piano d’asta">
+                <h3>Un piano che puoi esportare<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>Prezzi obiettivo, budget e rose restano nel browser. Il piano si può importare ed esportare.</p>
+                <a href="https://github.com/Ago-filo/Fantamuretto">Codice ↗</a>
+              </article>
+            </section>
+          </article>
 
-      <article class="project workbench" id="document-workbench">
-        <a class="tile" href="#document-workbench" aria-labelledby="tile-workbench">
-          <div class="tile-heading">
-            <div>
-              <h2 id="tile-workbench">Document Workbench</h2>
-              <p>Controllo incrociato di ordini e fatture.</p>
-            </div>
-            <span class="expand" aria-hidden="true"></span>
-          </div>
-          <div class="cover paper-cover" aria-hidden="true">
-            <div class="paper-sheet order"><span>ORDINE</span><strong>122,00 €</strong></div>
-            <div class="paper-sheet invoice"><span>FATTURA</span><strong>134,20 €</strong></div>
-            <span class="paper-difference">+12,20 €</span>
-          </div>
-          <div class="tile-footer"><span>Prototipo locale</span><span>OCR · AI</span></div>
-        </a>
-        <section class="project-details" aria-labelledby="detail-workbench">
-          <p class="detail-status">Prototipo locale</p>
-          <h2 id="detail-workbench">Document Workbench</h2>
-          <p>Legge PDF e scansioni per confrontare ordini e fatture. Mostra le citazioni a supporto dei campi estratti e registra le correzioni manuali.</p>
-          <h3>Una prova con documenti sintetici</h3>
-          <p>Un ordine da 122,00 € e una fattura da 134,20 € riportano lo stesso riferimento. L’app segnala la differenza di 12,20 € e mostra i dati da controllare.</p>
-          <h3>Estrazione e controlli</h3>
-          <p>Il modello gira sul PC e propone i dati. Regole esplicite verificano riferimenti, fornitori e importi. La validazione su documenti reali e la distribuzione su altri computer sono ancora in programma.</p>
-          <p class="tech">Python · FastAPI · RapidOCR · Qwen · SQLite</p>
-        </section>
-      </article>
+          <article class="project second-brain" id="second-brain" data-group="work" data-x="570" data-y="120" data-mobile-x="64" data-mobile-y="391" style="--node-width:238px">
+            <a class="tile" draggable="false" href="#second-brain" aria-labelledby="tile-brain">
+              <div class="tile-heading">
+                <div>
+                  <h2 id="tile-brain">Second Brain</h2>
+                  <p>Ricerca nelle note con un modello locale.</p>
+                </div>
+                <span class="expand" aria-hidden="true">+</span>
+              </div>
+              <div class="cover brain-cover">
+                <img draggable="false" src="../second-brain/grafo-obsidian.png" alt="">
+              </div>
+              <div class="tile-footer"><span>Demo riproducibile</span><span>AI locale</span></div>
+            </a>
+            <section class="notes" id="notes-second-brain" aria-label="Appunti del progetto">
+              <article class="note note-visual" data-note="grafo" tabindex="0" aria-label="Grafo delle note">
+                <h3>Le note in Obsidian<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <img src="../second-brain/grafo-obsidian.png" alt="Grafo delle note fittizie per l’onboarding IT">
+                <a href="../second-brain/configurazione-locale.mp4">Guarda la configurazione ↗</a>
+              </article>
+              <article class="note" data-note="domanda" tabindex="0" aria-label="Domanda di esempio">
+                <h3>Una domanda da provare<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <details>
+                  <summary>La VPN non riparte. Che faccio?</summary>
+                  <p>Apri un ticket IT ad alta priorità. Indica la sede, quando è iniziato il problema e cosa hai già provato.</p>
+                  <cite>VPN e rete · Ticket ed escalation</cite>
+                </details>
+                <a href="../second-brain/index.html">Prova le domande ↗</a>
+              </article>
+              <article class="note" data-note="flusso" tabindex="0" aria-label="Dalle note alla risposta">
+                <h3>Dalle note alla risposta<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>Node.js sincronizza le modifiche. AnythingLLM recupera i passaggi e LM Studio genera la risposta in locale. Le prove includono domande senza risposta nelle note.</p>
+                <a href="../second-brain/second-brain.zip" download>Scarica le prove ↓</a>
+              </article>
+            </section>
+          </article>
 
-      <article class="project fantamuretto" id="fantamuretto">
-        <a class="tile" href="#fantamuretto" aria-labelledby="tile-fantamuretto">
-          <div class="tile-heading">
-            <div>
-              <h2 id="tile-fantamuretto">Fantamuretto</h2>
-              <p>Strumenti per l’asta del fantacalcio.</p>
-            </div>
-            <span class="expand" aria-hidden="true"></span>
-          </div>
-          <div class="cover fanta-cover">
-            <img src="../images/fantamuretto-dashboard.png" alt="">
-          </div>
-          <div class="tile-footer"><span>Web app pubblica</span><span>Fantacalcio</span></div>
-        </a>
-        <section class="project-details" aria-labelledby="detail-fantamuretto">
-          <p class="detail-status">Web app pubblica</p>
-          <h2 id="detail-fantamuretto">Fantamuretto</h2>
-          <p>Preparazione e gestione dell’asta del fantacalcio con fasce personali, prezzi obiettivo, budget e rose avversarie.</p>
-          <div class="detail-actions">
-            <a href="https://ago-filo.github.io/Fantamuretto/">Apri Fantamuretto ↗</a>
-            <a href="https://github.com/Ago-filo/Fantamuretto">Codice ↗</a>
-          </div>
-          <figure>
-            <img src="../images/fantamuretto-dashboard.png" alt="Dashboard della regia d’asta di Fantamuretto con i dati demo">
-            <figcaption>Regia d’asta con la configurazione demo</figcaption>
-          </figure>
-          <h3>Come aggiornare il listone durante una stagione?</h3>
-          <p>Gli identificatori dei giocatori permettono di aggiornare il listone conservando fasce, acquisti e storico. Il piano personale è salvato nel browser e può essere importato ed esportato.</p>
-          <p class="tech">JavaScript · HTML · CSS</p>
-        </section>
-      </article>
+          <article class="project workbench" id="document-workbench" data-group="work" data-x="830" data-y="235" data-mobile-x="345" data-mobile-y="421" style="--node-width:247px">
+            <a class="tile" draggable="false" href="#document-workbench" aria-labelledby="tile-workbench">
+              <div class="tile-heading">
+                <div>
+                  <h2 id="tile-workbench">Document Workbench</h2>
+                  <p>Controllo incrociato di ordini e fatture.</p>
+                </div>
+                <span class="expand" aria-hidden="true">+</span>
+              </div>
+              <div class="cover paper-cover" aria-hidden="true">
+                <div class="paper-sheet order"><span>ORDINE</span><strong>122,00 €</strong></div>
+                <div class="paper-sheet invoice"><span>FATTURA</span><strong>134,20 €</strong></div>
+                <span class="paper-difference">+12,20 €</span>
+              </div>
+              <div class="tile-footer"><span>Prototipo locale</span><span>OCR · AI</span></div>
+            </a>
+            <section class="notes" id="notes-document-workbench" aria-label="Appunti del progetto">
+              <article class="note note-paper" data-note="ordine" tabindex="0" aria-label="Ordine di esempio">
+                <h3>Ordine<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <strong>122,00 €</strong>
+                <p>Il totale che mi aspetto.</p>
+              </article>
+              <article class="note note-paper" data-note="fattura" tabindex="0" aria-label="Fattura di esempio">
+                <h3>Fattura<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <strong>134,20 €</strong>
+                <p>Il totale letto sul PDF.</p>
+              </article>
+              <article class="note" data-note="verifica" tabindex="0" aria-label="Verifica della differenza">
+                <h3>Differenza di 12,20 €<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>Il modello locale legge PDF e scansioni. Regole esplicite verificano riferimenti, fornitori e importi. L’app mostra le fonti e registra le correzioni. L’esempio usa documenti sintetici.</p>
+              </article>
+            </section>
+          </article>
 
-      <article class="project autoscuola" id="autoscuola">
-        <a class="tile" href="#autoscuola" aria-labelledby="tile-autoscuola">
-          <div class="tile-heading">
-            <div>
-              <h2 id="tile-autoscuola">Autoscuola</h2>
-              <p>Un gestionale per la segreteria.</p>
-            </div>
-            <span class="expand" aria-hidden="true"></span>
+          <article class="project autoscuola" id="autoscuola" data-group="work" data-x="568" data-y="368" data-mobile-x="82" data-mobile-y="616" style="--node-width:249px">
+            <a class="tile" draggable="false" href="#autoscuola" aria-labelledby="tile-autoscuola">
+              <div class="tile-heading">
+                <div>
+                  <h2 id="tile-autoscuola">Autoscuola</h2>
+                  <p>Un gestionale per la segreteria.</p>
+                </div>
+                <span class="expand" aria-hidden="true">+</span>
+              </div>
+              <div class="cover autoscuola-cover">
+                <img draggable="false" src="../images/autoscuola-genova.svg" alt="">
+              </div>
+              <div class="tile-footer"><span>Progetto privato</span><span>Gestionale</span></div>
+            </a>
+            <section class="notes" id="notes-autoscuola" aria-label="Appunti del progetto">
+              <article class="note" data-note="iscrizioni" tabindex="0" aria-label="Iscrizioni e segreteria">
+                <h3>Dall’iscrizione alla segreteria<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>Il gestionale raccoglie iscrizioni e attività quotidiane di segreteria, studenti e istruttori.</p>
+              </article>
+              <article class="note" data-note="stato" tabindex="0" aria-label="Stato del progetto Autoscuola">
+                <h3>Progetto privato<span class="note-grip" aria-hidden="true">⠿</span></h3>
+                <p>Codice e dati sono privati. La messa in produzione è da completare.</p>
+              </article>
+            </section>
+          </article>
+        </div>
+      </div>
+      <div class="board-tools">
+        <p class="board-help" id="board-help">
+          <span class="help-desktop">Trascina la mappa o i blocchi · Rotella per zoomare · Clic per aprire</span>
+          <span class="help-touch">Trascina la mappa · Pizzica per zoomare · Tocca per aprire</span>
+          <span class="help-focus">Trascina i blocchi e gli appunti</span>
+          <span class="help-focus-touch">Scorri per leggere · Sposta dal titolo</span>
+          <span class="sr-only">Usa le frecce per spostare la vista, o Alt e frecce per spostare l’elemento a fuoco.</span>
+        </p>
+        <div class="board-actions">
+          <button class="close-notes" type="button" hidden>Chiudi appunti</button>
+          <button class="reset-board" type="button" hidden>Ripristina</button>
+          <div class="zoom-tools" role="group" aria-label="Zoom">
+            <button data-zoom="out" type="button" aria-label="Riduci zoom">−</button>
+            <output class="zoom-value" aria-label="Livello di zoom" aria-live="off">100%</output>
+            <button data-zoom="in" type="button" aria-label="Aumenta zoom">+</button>
           </div>
-          <div class="cover autoscuola-cover">
-            <img src="../images/autoscuola-genova.svg" alt="">
-          </div>
-          <div class="tile-footer"><span>Progetto privato</span><span>Gestionale</span></div>
-        </a>
-        <section class="project-details" aria-labelledby="detail-autoscuola">
-          <p class="detail-status">Progetto privato</p>
-          <h2 id="detail-autoscuola">Autoscuola</h2>
-          <p>Gestionale dedicato alle iscrizioni e alle attività quotidiane di segreteria, studenti e istruttori.</p>
-          <figure>
-            <img src="../images/autoscuola-genova.svg" alt="Illustrazione di un’auto di scuola guida sul litorale di Genova">
-            <figcaption>Illustrazione del progetto</figcaption>
-          </figure>
-          <p>Il codice e i dati sono privati. La messa in produzione è da completare.</p>
-        </section>
-      </article>
+          <button class="fit-board" type="button">Panoramica</button>
+        </div>
+      </div>
+      <p class="sr-only board-status" role="status"></p>
     </section>
   </main>
-
-  <dialog class="zoom" aria-labelledby="zoom-title">
-    <div class="zoom-bar">
-      <span id="zoom-title">Scheda del progetto</span>
-      <button class="close-zoom" type="button" autofocus>Chiudi <span aria-hidden="true">×</span></button>
-    </div>
-    <div class="zoom-content"></div>
-  </dialog>
 </body>
 </html>
