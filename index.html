@@ -285,6 +285,25 @@
               </div>
             </div>
           </div>
+          <article class="project-panel" id="document-workbench" aria-labelledby="workbench-title">
+            <div class="project-copy">
+              <div class="project-state">
+                <span class="project-dot" aria-hidden="true"></span>
+                <span>Prototipo locale</span>
+              </div>
+              <h2 id="workbench-title">Document Workbench</h2>
+              <p>Legge PDF e scansioni per confrontare ordini e fatture. Mostra le citazioni a supporto dei campi estratti e registra le correzioni manuali.</p>
+              <p class="project-tech">Python · FastAPI · RapidOCR · Qwen · SQLite</p>
+            </div>
+            <dl class="project-context">
+              <dt>Un esempio</dt>
+              <dd>Un ordine da 122,00 € e una fattura da 134,20 € riportano lo stesso riferimento. L’app segnala la differenza tra i totali e mostra i dati da controllare.</dd>
+              <dt>Scelta tecnica</dt>
+              <dd>I modelli girano sul PC. Il modello propone i dati, mentre regole esplicite verificano riferimenti, fornitori e importi.</dd>
+              <dt>Stato del progetto</dt>
+              <dd>Verificato su documenti sintetici. Validazione su documenti reali e distribuzione su altri computer in programma.</dd>
+            </dl>
+          </article>
         </section>
         <footer>
           <span>Filippo Agosti</span
