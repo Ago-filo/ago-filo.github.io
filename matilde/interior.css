@@ -1,6 +1,6 @@
 /* Hallmark · editoriale · rosa caldo · ritratto a fianco e dittico fotografico. */
 :root {
-  --color-peach: #e6a07f;
+  --color-peach: #d8b5a6;
   --color-forest: #19241f;
   --color-body: #36352d;
   --color-muted: #544a43;
@@ -180,4 +180,118 @@ html, body { overflow-x: clip; }
 @media (min-width: 961px) and (max-width: 1150px) {
   .about-page .inner { column-gap: var(--space-xl); }
   .about-page .biography p { font-size: 14px; }
+}
+
+/* Rosa cipria e testi più marcati, condivisi dalle pagine interne. */
+:root {
+  --color-photo-ink: #fbf4e8;
+  --color-photo-shade: #0007;
+}
+.split-page .biography p,
+.projects .project-section > p {
+  font-weight: 600;
+}
+.split-page .navigation a,
+.projects .nav a,
+.split-page .eyebrow,
+.projects .eyebrow,
+.page-footer,
+.projects .footer {
+  font-weight: 600;
+}
+.split-page .biography p { font-size: 16px; }
+.projects .project-section > p { font-size: 16px; line-height: 1.8; }
+
+.photo-opening {
+  position: relative;
+  height: clamp(360px, 60svh, 700px);
+  overflow: hidden;
+  color: var(--color-photo-ink);
+  background: var(--color-photo);
+}
+.photo-opening > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+.photo-opening::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, var(--color-photo-shade));
+}
+.photo-opening h1 {
+  position: absolute;
+  z-index: 1;
+  left: var(--page-gutter);
+  bottom: var(--space-xl);
+  margin: 0;
+  font: 400 clamp(44px, 5.5vw, 80px)/1.1 var(--font-display);
+}
+.materials-content, .farewell-content {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: var(--space-2xl) var(--page-gutter);
+}
+.material-folders {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+  align-items: start;
+}
+.material-folder { min-width: 0; border-block: 1px solid var(--color-line); }
+.material-folder summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-block: var(--space-xl);
+  cursor: pointer;
+  list-style: none;
+  font: 400 clamp(28px, 3vw, 40px)/1.1 var(--font-display);
+}
+.material-folder summary::-webkit-details-marker { display: none; }
+.material-folder summary > svg { width: 56px; height: 44px; flex-shrink: 0; }
+.folder-toggle { margin-left: auto; font: 400 28px/1 var(--font-display); }
+.material-folder[open] .folder-toggle { transform: rotate(45deg); }
+.material-folder summary:hover, .folder-content a:hover { color: var(--surface-accent); }
+.material-folder summary:focus-visible,
+.folder-content a:focus-visible {
+  outline: 2px solid var(--surface-accent);
+  outline-offset: 4px;
+}
+.folder-content { padding-bottom: var(--space-xl); }
+.folder-content a { text-decoration: none; font-size: 15px; font-weight: 600; }
+.folder-content small { display: block; font: 400 13px/1.6 Arial, Helvetica, sans-serif; color: var(--color-muted); }
+.photo-downloads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
+.photo-downloads a { min-width: 0; }
+.photo-downloads img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; display: block; margin-bottom: var(--space-sm); }
+.photo-downloads a > span { display: block; line-height: 1.4; }
+.document-downloads a { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); }
+.document-downloads a + a { border-top: 1px solid var(--color-line); }
+
+.farewell-content { padding-top: clamp(40px, 7vw, 96px); }
+.contact-heading { margin-bottom: var(--space-2xl); }
+.contact-heading h1 { margin: 0; font: 400 clamp(40px, 5vw, 72px)/1.1 var(--font-display); }
+.contact-heading > p { margin-block: var(--space-md) var(--space-lg); font-size: 16px; font-weight: 500; }
+.contact-heading .socials { gap: var(--space-md); }
+.contact-heading .social-icon { border-color: var(--color-line); width: 48px; height: 48px; }
+.contact-heading .social-icon[aria-disabled="true"] { color: var(--color-muted); cursor: default; }
+.farewell-photo { margin: 0; background: var(--color-photo); overflow: hidden; }
+.farewell-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(400px, 65vw, 760px);
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+@media (max-width: 650px) {
+  .material-folders { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .materials-content, .farewell-content { padding-block: var(--space-xl); }
+  .photo-opening { height: 52svh; min-height: 340px; }
+  .photo-opening > img { object-position: 50% 25%; }
+  .farewell-photo img { height: auto; aspect-ratio: 4/5; object-position: top; }
+  .contact-heading { margin-bottom: var(--space-xl); }
 }
