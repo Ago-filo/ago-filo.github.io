@@ -187,6 +187,62 @@ html, body { overflow-x: clip; }
   --color-photo-ink: #fbf4e8;
   --color-photo-shade: #0007;
 }
+
+.full-photo-page .signature { bottom: clamp(140px, 19vh, 200px); }
+.full-photo-page .signature h1 { overflow-wrap: anywhere; }
+.hero.download-cover .photograph { object-position: 50% 24%; }
+.hero.contact-cover .photograph { object-position: 50% 0%; }
+.cover-actions { display: flex; align-items: center; gap: 16px; margin-top: 32px; }
+.cover-actions button {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 24px;
+  border: 1px solid var(--color-photo-ink);
+  background: var(--color-photo-shade);
+  color: var(--color-photo-ink);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+.cover-actions button:hover { background: var(--color-rose-ink); }
+.cover-actions button:active { background: var(--color-forest); }
+.download-dialog {
+  color-scheme: light;
+  width: min(1120px, calc(100% - 32px));
+  max-height: calc(100svh - 32px);
+  padding: clamp(20px, 4vw, 48px);
+  border: 0;
+  background: var(--color-peach);
+  color: var(--color-forest);
+  overscroll-behavior: contain;
+}
+.download-dialog::backdrop { background: var(--color-photo-shade); }
+.download-dialog > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+.download-dialog h2 { font: 400 clamp(32px, 4vw, 48px)/1.1 var(--font-display); margin: 0; }
+.download-dialog form { margin: 0; }
+.download-dialog button { padding: 12px; border: 1px solid var(--color-line); background: transparent; color: inherit; cursor: pointer; }
+.download-dialog button:hover { background: var(--color-photo-ink); }
+.download-dialog :focus-visible { outline: 2px solid var(--color-rose-ink); outline-offset: 4px; }
+.download-dialog .document-downloads a { color: var(--color-forest); text-decoration: none; font-weight: 600; }
+.download-dialog small { display: block; margin-top: 8px; font-weight: 400; }
+.photo-group + .photo-group { margin-top: 40px; }
+.photo-group h3 { font: 400 26px/1.2 var(--font-display); }
+.all-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.all-photos a { min-width: 0; color: inherit; text-decoration: none; font-size: 13px; font-weight: 600; }
+.all-photos img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; margin-bottom: 12px; }
+.all-photos span { overflow-wrap: anywhere; }
+.all-photos a:hover { text-decoration: underline; }
+@media (max-width: 650px) {
+  .all-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .cover-actions button { padding: 14px 18px; gap: 20px; font-size: 14px; }
+  .contact-cover .signature h1 { font-size: clamp(34px, 8vw, 52px); }
+}
+@media (max-height: 480px) {
+  .full-photo-page .signature { bottom: 75px; }
+  .cover-actions { margin-top: 16px; }
+  .cover-actions button { padding-block: 10px; }
+}
 .split-page .biography p,
 .projects .project-section > p {
   font-weight: 600;
